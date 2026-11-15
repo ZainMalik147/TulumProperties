@@ -1,0 +1,11 @@
+{
+  "name": "tulum-properties",
+  "version": "1.0.0",
+  "description": "Tulum Properties — Real Estate Developer Guide",
+  "type": "module",
+  "scripts": {
+    "build": "node build.mjs",
+    "serve": "node serve.mjs 3000",
+    "start": "node serve.mjs 3000"
+  }
+}
