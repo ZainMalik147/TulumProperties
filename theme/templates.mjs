@@ -18,15 +18,16 @@ export const LOGO = (id = 'lg') => `<svg class="brand-mark" viewBox="0 0 48 56" 
   </g>
 </svg>`;
 
-const brand = (site, id) => `<a class="brand" href="/" aria-label="${site.name} — home">${LOGO(id)}<span class="brand-text"><span class="brand-name">Tulum</span><span class="brand-sub">Properties · Developer Guide</span></span></a>`;
+const brand = (site, id) => `<a class="brand" href="/" aria-label="${site.name}, home">${LOGO(id)}<span class="brand-text"><span class="brand-name">Tulum</span><span class="brand-sub">Properties · Developer Guide</span></span></a>`;
 
 function devImage(ctx, dev, i, which = 0) {
   const keys = [].concat(dev.images || dev.image || []);
   const k = keys[which];
   return (k && ctx.images.find(im => im.file === k)) || ctx.images[(i * 3 + 1 + which) % ctx.images.length];
 }
+const devLink = (ctx, dev, placement, inner, cls = 'dev-link') => `<a class="${cls}" href="${ctx.esc(ctx.outboundUrl(ctx.site, dev.website))}" ${ctx.outAttrs(ctx.site, dev, placement)}>${inner}<span class="sr-only">(${ctx.esc(dev.name)} official website, opens in a new tab)</span></a>`;
 const logoPlate = (ctx, dev, cls = '') => dev.logo?.file
-  ? `<figure class="logo-plate ${dev.logo.background === 'dark' ? 'is-dark' : ''} ${cls}"><img src="/${dev.logo.file}" alt="${ctx.esc(dev.name)} logo" loading="lazy"><figcaption class="sr-only">Official logo of ${ctx.esc(dev.name)}, shown for identification only.</figcaption></figure>`
+  ? `<figure class="logo-plate ${dev.logo.background === 'dark' ? 'is-dark' : ''} ${cls}">${devLink(ctx, dev, 'logo', `<img src="/${dev.logo.file}" alt="${ctx.esc(dev.name)} logo" loading="lazy">`, 'logo-link')}<figcaption class="sr-only">Official logo of ${ctx.esc(dev.name)}, shown for identification only.</figcaption></figure>`
   : `<div class="logo-plate is-text ${cls}">${ctx.esc(dev.name)}</div>`;
 
 function layout(ctx, page, body) {
@@ -82,7 +83,7 @@ ${body}
     <nav aria-label="Legal"><h2>Legal</h2><a href="/disclaimer/">Disclaimer</a><a href="/privacy-policy/">Privacy policy</a><a href="#" data-open-consent>Cookie settings</a><button class="motion-toggle" type="button" aria-pressed="false">Pause motion</button></nav>
   </div>
   <div class="wrap footer-legal">
-    <p>${esc(site.name)} is an independent editorial directory. It is not a real estate agency or broker, does not sell property, and is not affiliated with, sponsored or endorsed by any company featured. All trademarks and logos belong to their owners and are shown for identification only.</p>
+    <p>${esc(site.name)} is an independent editorial directory. It is not a real estate agency or broker, does not sell property, and is not affiliated with any company featured. All trademarks and logos belong to their owners and are shown for identification only.</p>
     <p>© ${new Date().getFullYear()} ${esc(site.name)}</p>
   </div>
 </footer>
@@ -112,7 +113,7 @@ export function home(ctx) {
     <p class="eyebrow reveal">${esc(site.hero.eyebrow)}</p>
     <h1 id="hero-title" class="hero-title split">${words(site.hero.title)}</h1>
     <p class="hero-sub reveal" style="--d:.5s">${esc(site.hero.subtitle)}</p>
-    <div class="hero-cta reveal" style="--d:.7s"><a class="btn btn-solid magnetic" href="#developers">${esc(site.hero.button)} ${ARROW_R}</a><a class="btn btn-line" href="#about-guide">An independent guide</a></div>
+    <div class="hero-cta reveal" style="--d:.7s"><a class="btn btn-solid btn-explore magnetic" href="#developers">${esc(site.hero.button)} ${ARROW_R}</a><a class="btn btn-line" href="#about-guide">An independent guide</a></div>
   </div>
   <div class="hero-foot wrap">
     <span class="coords">20.2114° N · 87.4654° W</span>
@@ -140,7 +141,7 @@ export function home(ctx) {
   <div class="wrap devs-head">
     <p class="eyebrow reveal">Featured developers</p>
     <h2 id="devs-title" class="section-title reveal">Four builders,<br><em>one coastline.</em></h2>
-    <p class="devs-note reveal">An editorial selection, presented in no particular order — not a ranking.</p>
+    <p class="devs-note reveal">An editorial selection, presented in no particular order. Not a ranking.</p>
     <nav class="dev-index reveal" aria-label="Jump to developer">${devs.map((d, i) => `<a href="#dev-${d.slug}"><span>0${i + 1}</span>${esc(d.name)}</a>`).join('')}</nav>
   </div>
   ${devs.map((d, i) => {
@@ -149,8 +150,8 @@ export function home(ctx) {
   <article class="dev ${i % 2 ? 'is-flip' : ''}" id="dev-${d.slug}" aria-labelledby="dev-${d.slug}-name">
     <div class="wrap dev-grid">
       <div class="dev-visual">
-        <div class="arch arch-main tilt" data-parallax="0.08">${photo(im, { sizes: '(min-width: 900px) 45vw, 92vw', alt: im.subject })}</div>
-        <div class="arch arch-small" data-parallax="-0.12">${photo(im2, { sizes: '30vw', alt: im2.subject })}</div>
+        <div class="arch arch-main tilt" data-parallax="0.08">${devLink(ctx, d, 'image', photo(im, { sizes: '(min-width: 900px) 45vw, 92vw', alt: im.subject }))}</div>
+        <div class="arch arch-small" data-parallax="-0.12">${devLink(ctx, d, 'image', photo(im2, { sizes: '30vw', alt: im2.subject }))}</div>
         <span class="dev-num" aria-hidden="true">0${i + 1}</span>
       </div>
       <div class="dev-body">
@@ -179,7 +180,7 @@ export function home(ctx) {
 
 <section class="about-guide" id="about-guide" aria-labelledby="ag-title">
   <div class="wrap ag-grid">
-    <div class="ag-badge" aria-hidden="true"><svg viewBox="0 0 200 200"><defs><path id="circ" d="M100,100 m-78,0 a78,78 0 1,1 156,0 a78,78 0 1,1 -156,0"/></defs><text><textPath href="#circ">INDEPENDENT · EDITORIAL · NOT AFFILIATED · INDEPENDENT · EDITORIAL · </textPath></text></svg><div class="ag-badge-mark">${LOGO('bd')}</div></div>
+    <div class="ag-badge" aria-hidden="true"><svg viewBox="0 0 200 200"><defs><path id="circ" d="M100,100 m-78,0 a78,78 0 1,1 156,0 a78,78 0 1,1 -156,0"/></defs><text><textPath href="#circ" textLength="486" lengthAdjust="spacing">INDEPENDENT · EDITORIAL · NOT AFFILIATED ·</textPath></text></svg><div class="ag-badge-mark">${LOGO('bd')}</div></div>
     <div>
       <p class="eyebrow">About the guide</p>
       <h2 id="ag-title" class="section-title">An independent<br><em>point of view.</em></h2>
@@ -213,7 +214,7 @@ export function profile(ctx, d) {
       <div class="dev-cta reveal"><a class="btn btn-solid magnetic" href="${esc(outboundUrl(site, d.website))}" ${outAttrs(site, d, 'profile_hero')}>Visit official website ${ARROW}<span class="sr-only">(opens in a new tab)</span></a></div>
     </div>
     <div class="p-hero-visual">
-      <div class="arch arch-main tilt">${photo(im, { eager: true, sizes: '(min-width: 900px) 45vw, 92vw', alt: im.subject })}</div>
+      <div class="arch arch-main tilt">${devLink(ctx, d, 'image', photo(im, { eager: true, sizes: '(min-width: 900px) 45vw, 92vw', alt: im.subject }))}</div>
       ${logoPlate(ctx, d, 'p-logo')}
     </div>
   </div>
@@ -253,6 +254,17 @@ ${d.projects?.length ? `<section class="p-projects" aria-labelledby="pj-title">
   </div>
 </section>` : ''}
 
+${(() => {
+  const extra = [].concat(d.images || []).slice(2).map(k => ctx.images.find(im => im.file === k)).filter(Boolean);
+  return extra.length ? `<section class="p-gallery" aria-labelledby="gal-title">
+  <div class="wrap">
+    <p class="eyebrow reveal">In pictures</p>
+    <h2 id="gal-title" class="section-title reveal">${esc(d.name)} <em>developments</em></h2>
+    <div class="gal-grid">${extra.map((g, k) => `<figure class="gal-item reveal" style="--d:${k * 0.08}s">${photo(g, { sizes: '(min-width: 900px) 45vw, 92vw', alt: g.subject })}<figcaption>${esc(g.subject)}</figcaption></figure>`).join('')}</div>
+  </div>
+</section>` : '';
+})()}
+
 <section class="p-band">
   <div class="arch-band" data-parallax="0.1">${photo(im2, { alt: im2.subject })}</div>
   <div class="wrap p-band-inner">
@@ -267,7 +279,7 @@ ${d.projects?.length ? `<section class="p-projects" aria-labelledby="pj-title">
 
   return layout(ctx, {
     path: `/developers/${d.slug}/`, type: 'profile', developer: d, ogType: 'profile',
-    title: `${d.name} — Real Estate Developer in Tulum | ${site.name}`,
+    title: `${d.name}, Real Estate Developer in Tulum | ${site.name}`,
     description: (d.seoDescription || `${d.summary} Independent profile: background, key areas of activity, projects and official website.`).slice(0, 300),
     image: im.file + '-1920.webp', jsonld: developerJsonLd(site, d),
   }, body);

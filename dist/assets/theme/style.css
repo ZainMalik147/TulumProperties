@@ -82,7 +82,7 @@ a { color: inherit; }
 @media (min-width: 960px) { .nav { display: flex; } .menu-btn { display: none; } }
 
 /* ---------- Hero ---------- */
-.hero { position: relative; min-height: 100svh; display: flex; flex-direction: column; justify-content: flex-end; color: var(--cream); overflow: hidden; isolation: isolate; }
+.hero { position: relative; min-height: 100svh; display: flex; flex-direction: column; justify-content: flex-end; color: var(--cream); overflow: hidden; isolation: isolate; position: relative; }
 .hero-media { position: absolute; inset: 0; z-index: -2; }
 .hero-img { width: 100%; height: 100%; object-fit: cover; transform: scale(1.12); transition: transform 2.4s var(--ease), opacity .8s; }
 .is-loaded .hero-img { transform: scale(1.02); }
@@ -193,7 +193,7 @@ a { color: inherit; }
 .about-guide p { max-width: 60ch; color: rgba(244,236,223,.85); }
 .ag-grid { display: grid; gap: 50px; align-items: center; }
 .ag-badge { position: relative; width: 220px; aspect-ratio: 1; }
-.ag-badge svg:first-child { width: 100%; height: 100%; animation: rot 26s linear infinite; }
+.ag-badge > svg:first-child { width: 100%; height: 100%; animation: rot 26s linear infinite; }
 .ag-badge text { font: 500 13.4px var(--sans); letter-spacing: .26em; fill: var(--sand); }
 .ag-badge-mark { position: absolute; inset: 0; display: grid; place-items: center; color: var(--sand); }
 .ag-badge-mark .brand-mark { width: 54px; height: 64px; }
@@ -302,3 +302,32 @@ a { color: inherit; }
 /* Developer website temporarily offline */
 .link-off { opacity: .45; cursor: not-allowed; pointer-events: none; text-decoration: none; }
 .site-offline { font-size: 14px; line-height: 1.5; padding: 12px 16px; margin: 0 0 20px; border-inline-start: 3px solid currentColor; opacity: .85; max-width: 60ch; }
+
+/* ===== Client round 2: prominent "Explore the Developers" CTA + clickable developer logos/images ===== */
+.btn.btn-explore { min-height: 68px; padding: 0 44px; font-size: 15px; font-weight: 500; letter-spacing: .2em; gap: 18px; box-shadow: 0 18px 44px -14px rgba(0,0,0,.55); isolation: isolate; position: relative; }
+.btn.btn-explore .ico { width: 22px; height: 22px; transition: transform .5s cubic-bezier(.2,.8,.2,1); }
+.btn.btn-explore:hover .ico { transform: translateX(6px); }
+.btn.btn-explore::after { content: ""; position: absolute; inset: -1px; border: 2px solid var(--pulse, currentColor); opacity: 0; pointer-events: none; animation: explorePulse 2.8s ease-out 2.2s infinite; border-radius: inherit; }
+@keyframes explorePulse { 0% { opacity: .7; transform: scale(1); } 100% { opacity: 0; transform: scale(1.12, 1.35); } }
+@media (max-width: 600px) { .btn.btn-explore { min-height: 60px; padding: 0 30px; font-size: 13.5px; width: 100%; justify-content: center; } }
+@media (prefers-reduced-motion: reduce) { .btn.btn-explore::after { animation: none; } }
+.dev-link { display: block; width: 100%; height: 100%; color: inherit; cursor: pointer; }
+.dev-link img { transition: transform 1.1s cubic-bezier(.2,.8,.2,1), filter .6s; }
+.dev-link:hover img { transform: scale(1.035); }
+.logo-link { display: inline-grid; place-items: center; color: inherit; cursor: pointer; transition: opacity .3s, transform .4s; }
+.logo-link:hover { opacity: .85; transform: translateY(-2px); }
+.btn.btn-explore { --pulse: var(--clay); font-size: 17px; letter-spacing: .02em; }
+
+/* Pulse ring that is not clipped by overflow:hidden buttons */
+.btn.btn-explore::after { display: none; }
+.btn.btn-explore { animation: explorePulseShadow 2.8s ease-out 2.2s infinite; }
+@keyframes explorePulseShadow { 0% { box-shadow: 0 18px 44px -14px rgba(0,0,0,.45), 0 0 0 0 var(--pulse, rgba(255,255,255,.6)); } 75%, 100% { box-shadow: 0 18px 44px -14px rgba(0,0,0,.45), 0 0 0 16px rgba(0,0,0,0); } }
+@media (prefers-reduced-motion: reduce) { .btn.btn-explore { animation: none; } }
+
+/* Profile photo gallery (developers with more than two photos) */
+.p-gallery { padding-block: clamp(70px, 9vw, 130px); }
+.gal-grid { display: grid; gap: 22px; margin-top: 34px; }
+.gal-item { margin: 0; }
+.gal-item img { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; border-radius: 18px; box-shadow: 0 30px 60px -36px rgba(22,52,42,.55); }
+.gal-item figcaption { font-size: 13px; opacity: .75; margin-top: 10px; }
+@media (min-width: 900px) { .gal-grid { grid-template-columns: 1fr 1fr; gap: 34px; } .gal-item:nth-child(even) { margin-top: 60px; } }

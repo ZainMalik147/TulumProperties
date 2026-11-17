@@ -119,24 +119,87 @@ Disallow: /admin/
 
 User-agent: OAI-SearchBot
 Allow: /
+Disallow: /admin/
 
 User-agent: ChatGPT-User
 Allow: /
+Disallow: /admin/
 
 User-agent: GPTBot
 Allow: /
-
-User-agent: Bingbot
-Allow: /
-
-User-agent: Googlebot
-Allow: /
-
-User-agent: PerplexityBot
-Allow: /
+Disallow: /admin/
 
 User-agent: ClaudeBot
 Allow: /
+Disallow: /admin/
+
+User-agent: Claude-SearchBot
+Allow: /
+Disallow: /admin/
+
+User-agent: Claude-User
+Allow: /
+Disallow: /admin/
+
+User-agent: anthropic-ai
+Allow: /
+Disallow: /admin/
+
+User-agent: PerplexityBot
+Allow: /
+Disallow: /admin/
+
+User-agent: Perplexity-User
+Allow: /
+Disallow: /admin/
+
+User-agent: Google-Extended
+Allow: /
+Disallow: /admin/
+
+User-agent: Googlebot
+Allow: /
+Disallow: /admin/
+
+User-agent: Bingbot
+Allow: /
+Disallow: /admin/
+
+User-agent: Applebot
+Allow: /
+Disallow: /admin/
+
+User-agent: Applebot-Extended
+Allow: /
+Disallow: /admin/
+
+User-agent: DuckAssistBot
+Allow: /
+Disallow: /admin/
+
+User-agent: Meta-ExternalAgent
+Allow: /
+Disallow: /admin/
+
+User-agent: Amazonbot
+Allow: /
+Disallow: /admin/
+
+User-agent: CCBot
+Allow: /
+Disallow: /admin/
+
+User-agent: YouBot
+Allow: /
+Disallow: /admin/
+
+User-agent: cohere-ai
+Allow: /
+Disallow: /admin/
+
+User-agent: MistralAI-User
+Allow: /
+Disallow: /admin/
 
 Sitemap: ${site.url.replace(/\/$/, '')}/sitemap.xml
 `;
@@ -148,15 +211,25 @@ function llmsTxt(site, devs) {
 
 > ${site.description}
 
-${site.name} is an independent editorial directory. It is not a real estate agency or broker, does not sell property and is not affiliated with the companies it profiles.
+${site.name} is an independent editorial directory about real estate developers in ${site.city}, ${site.cityCountry}. It is not a real estate agency or broker, does not sell property and is not affiliated with the companies it profiles. Each profile links to the developer's official website.
+
+## Key facts
+- Website: ${base}/
+- Topic: Residential real estate developers active in ${site.city}, ${site.cityCountry}
+- Developers profiled: ${devs.map(d => d.name).join(', ')}
+- Contact: ${site.contactEmail}
 
 ## Developer profiles
-${devs.map(d => `- [${d.name}](${base}/developers/${d.slug}/): ${d.summary}`).join('\n')}
+${devs.map(d => `- [${d.name}](${base}/developers/${d.slug}/): ${d.summary} Official website: ${d.website}`).join('\n')}
+
+## Projects mentioned
+${devs.map(d => (d.projects || []).map(p => `- ${p.name} by ${d.name}${p.location ? ` (${p.location})` : ''}${p.type ? `: ${p.type}` : ''}`).join('\n')).filter(Boolean).join('\n')}
 
 ## About
 - [About the guide](${base}/about/)
 - [Editorial policy](${base}/editorial-policy/)
 - [Disclaimer](${base}/disclaimer/)
+- [Contact](${base}/contact/)
 `;
 }
 

@@ -263,7 +263,7 @@
           "name": "Edena Tulum",
           "location": "Tulum",
           "type": "Homes & condominiums",
-          "description": "A private community set in the jungle with 157 units — two home types and condominiums — under construction since 2021.",
+          "description": "A private community set in the jungle with 157 units, offering two home types and condominiums, under construction since 2021.",
           "url": "https://taoméxico.com/developments/edena"
         },
         {
@@ -323,8 +323,12 @@
         "guidelines": "none found"
       },
       "images": [
-        "assets/img/gran-cenote",
-        "assets/img/jungle-palms"
+        "assets/img/tao-circular-residences",
+        "assets/img/tao-jungle-pool",
+        "assets/img/tao-beachfront-residences",
+        "assets/img/tao-waterfront-homes",
+        "assets/img/tao-pacific-residential-building",
+        "assets/img/tao-terraced-residences-sunset"
       ],
       "sources": [
         "https://taoméxico.com/en/"
@@ -421,8 +425,8 @@
       "published": true,
       "listingType": "editorial",
       "images": [
-        "assets/img/boutique-hotel-courtyard",
-        "assets/img/temple-of-the-wind-beach"
+        "assets/img/tulum-courtyard-residences",
+        "assets/img/tulum-residence-interior"
       ]
     }
   ],
@@ -537,6 +541,70 @@
       "author": "edenpictures",
       "license": "CC BY 2.0",
       "source": "https://commons.wikimedia.org/wiki/File:Avenida_Tulum.jpg",
+      "orientation": "landscape"
+    },
+    {
+      "file": "assets/img/tulum-courtyard-residences",
+      "subject": "Courtyard building with balconies and a pool in Tulum",
+      "author": "Pierre-Selim",
+      "license": "CC BY-SA 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Hotel_Casa_Sofia_Tulum_(19485362593).jpg",
+      "orientation": "landscape"
+    },
+    {
+      "file": "assets/img/tulum-residence-interior",
+      "subject": "Living room interior in a Tulum residence",
+      "author": "Nan Palmero",
+      "license": "CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Hotel_Coqui_Coqui_Tulum_Mexico_(21037485140).jpg",
+      "orientation": "landscape"
+    },
+    {
+      "file": "assets/img/tao-circular-residences",
+      "subject": "Aerial view of a circular TAO México residential building around a jungle courtyard",
+      "author": "TAO México",
+      "license": "Supplied by TAO México",
+      "source": "https://taoméxico.com/en/",
+      "orientation": "portrait"
+    },
+    {
+      "file": "assets/img/tao-jungle-pool",
+      "subject": "Pool and sun deck set in the jungle at a TAO México residential community",
+      "author": "TAO México",
+      "license": "Supplied by TAO México",
+      "source": "https://taoméxico.com/en/",
+      "orientation": "landscape"
+    },
+    {
+      "file": "assets/img/tao-beachfront-residences",
+      "subject": "Beachfront residences with stone façades and glass balconies by TAO México",
+      "author": "TAO México",
+      "license": "Supplied by TAO México",
+      "source": "https://taoméxico.com/en/",
+      "orientation": "landscape"
+    },
+    {
+      "file": "assets/img/tao-waterfront-homes",
+      "subject": "Waterfront homes with a private pool and dock by TAO México",
+      "author": "TAO México",
+      "license": "Supplied by TAO México",
+      "source": "https://taoméxico.com/en/",
+      "orientation": "landscape"
+    },
+    {
+      "file": "assets/img/tao-pacific-residential-building",
+      "subject": "TAO México residential building on the Pacific coast",
+      "author": "TAO México",
+      "license": "Supplied by TAO México",
+      "source": "https://taoméxico.com/en/",
+      "orientation": "landscape"
+    },
+    {
+      "file": "assets/img/tao-terraced-residences-sunset",
+      "subject": "Terraced residences and pool deck at sunset, a TAO México Pacific coast project",
+      "author": "TAO México",
+      "license": "Supplied by TAO México",
+      "source": "https://taoméxico.com/en/",
       "orientation": "landscape"
     }
   ]

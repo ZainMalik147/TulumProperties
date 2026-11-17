@@ -1,6 +1,6 @@
 // Shared copy for About / Editorial Policy / Disclaimer / Privacy / Contact / Accessibility / Credits.
 // Jurisdiction-specific wording is driven by site.legal.jurisdiction ("MX" | "IL" | "AE").
-// NOTE: this is a solid drafting baseline — have local counsel review before public launch (brief §9).
+// NOTE: this is a solid drafting baseline; have local counsel review before public launch (brief §9).
 const esc = (s = '') => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 
 const J = {
@@ -45,13 +45,11 @@ export function legalPages(site, devs, images) {
       html: `
 <p class="lead">${esc(site.name)} is an independent, English-language guide to established real estate developers active in ${esc(site.city)}, ${esc(site.cityCountry || j.country)}.</p>
 <h2>What this guide is</h2>
-<p>We profile developers that are shaping ${esc(site.city)}'s residential landscape — their background, where they work, the kind of communities they build, and where to find their official information. Each profile links directly to the developer's own website so that readers can continue their research at the source.</p>
+<p>We profile developers that are shaping ${esc(site.city)}'s residential landscape: their background, where they work, the kind of communities they build, and where to find their official information. Each profile links directly to the developer's own website so that readers can continue their research at the source.</p>
 <h2>What it is not</h2>
 <p>${j.notAgent} We do not sell property, collect buyer enquiries, publish prices or recommend investments.</p>
 <h2>How companies are selected</h2>
-<p>The current selection — ${esc(list)} — is editorial. It is not a ranking and does not suggest that these are the largest or best developers in ${esc(site.city)}. See our <a href="/editorial-policy/">editorial policy</a> for how profiles are researched and kept up to date.</p>
-<h2>Independence</h2>
-<p>The companies featured have not paid to appear and have no control over what we write. Their names, logos and links are used only to identify them. If sponsored placements are introduced in future, they will always be clearly labelled as such and kept separate from editorial profiles.</p>`,
+<p>The current selection of ${esc(list)} is editorial. It is not a ranking and does not suggest that these are the largest or best developers in ${esc(site.city)}. See our <a href="/editorial-policy/">editorial policy</a> for how profiles are researched and kept up to date.</p>`,
     },
     {
       path: '/editorial-policy/', priority: 0.4, kicker: 'Policy', title: 'Editorial Policy',
@@ -61,13 +59,13 @@ export function legalPages(site, devs, images) {
 <h2>Selection</h2>
 <p>Developers are chosen by our editors based on an established, publicly visible track record in ${esc(site.city)}. Inclusion is not a ranking, endorsement or recommendation, and the order in which companies appear has no significance.</p>
 <h2>Sources</h2>
-<p>Profiles are written in our own words using publicly available information — principally each developer's official website, published company materials and reputable press coverage. Sources are listed on each profile.</p>
+<p>Profiles are written in our own words using publicly available information, principally each developer's official website, published company materials and reputable press coverage. Sources are listed on each profile.</p>
 <h2>What we don't publish</h2>
 <p>We do not publish prices, inventory, payment plans, yields or investment projections, and we do not rate or review individual properties.</p>
 <h2>Logos and trademarks</h2>
 <p>Company names and logos belong to their respective owners. They are reproduced unaltered, only to identify each company, and never as part of our own branding. Their use does not imply any partnership, sponsorship or endorsement.</p>
 <h2>Corrections</h2>
-<p>We review profiles periodically. If you spot an error — including developers wishing to correct factual information or request removal of their logo — write to ${mail} and we will review it promptly.</p>
+<p>We review profiles periodically. If you spot an error, or if you are a developer wishing to correct factual information or remove your logo, write to ${mail} and we will review it promptly.</p>
 <h2>Sponsored content</h2>
 <p>The guide may in future offer a limited number of clearly labelled sponsored placements. Sponsored content will always be identified as such and will not affect editorial profiles or their selection.</p>`,
     },
@@ -114,7 +112,7 @@ export function legalPages(site, devs, images) {
       path: '/contact/', priority: 0.4, kicker: 'Contact', title: 'Contact',
       description: `Contact the editors of ${site.name}.`,
       html: `
-<p class="lead">We'd love to hear from you — corrections, suggestions, and enquiries from developers are all welcome.</p>
+<p class="lead">We'd love to hear from you. Corrections, suggestions and enquiries from developers are all welcome.</p>
 <div class="contact-card">
   <p class="contact-label">Editorial &amp; general</p>
   <p class="contact-email">${mail}</p>
@@ -136,6 +134,7 @@ export function legalPages(site, devs, images) {
 <p>The website is designed to conform with the Web Content Accessibility Guidelines (WCAG) 2.1 at Level AA, consistent with Israeli Standard SI 5568 and the Equal Rights for Persons with Disabilities (Service Accessibility Adjustments) Regulations, 5773-2013.</p>
 <h2>Accessibility features</h2>
 <ul>
+<li>An accessibility toolbar, available from the accessibility icon at the bottom corner of every page. It lets you increase or decrease text size, switch to high contrast, negative contrast, grayscale or a light background, highlight links and headings, use a more readable font, increase text spacing, enlarge the cursor, strengthen keyboard focus indicators and stop animations. Your choices are remembered on your device and can be reset at any time.</li>
 <li>Semantic HTML with a logical heading structure and landmarks.</li>
 <li>A "Skip to content" link and full keyboard navigation with visible focus indicators.</li>
 <li>Text alternatives for all meaningful images; decorative 3D graphics are hidden from assistive technology.</li>
@@ -156,7 +155,7 @@ export function legalPages(site, devs, images) {
     description: `Photography credits and licences for ${site.name}.`,
     html: `
 <p class="lead">Photography on this website is used under open licences. We thank the photographers below.</p>
-<ul class="credits">${images.map(i => `<li><strong>${esc(i.subject)}</strong> — ${esc(i.author || 'Unknown')}, <a href="${esc(i.source)}" target="_blank" rel="noopener">${esc(i.license)}</a>${/BY|SA/i.test(i.license || '') ? ' (cropped/resized)' : ''}</li>`).join('')}</ul>
+<ul class="credits">${images.map(i => `<li><strong>${esc(i.subject)}</strong>, ${esc(i.author || 'Unknown')}, <a href="${esc(i.source)}" target="_blank" rel="noopener">${esc(i.license)}</a>${/BY|SA/i.test(i.license || '') ? ' (cropped/resized)' : ''}</li>`).join('')}</ul>
 <p>Developer logos are trademarks of their respective owners and are reproduced unaltered for identification only.</p>`,
   });
   return pages;

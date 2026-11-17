@@ -1,16 +1,49 @@
 # Tulum Properties
 
-> An independent guide to established real estate developers active in Tulum, Mexico — their backgrounds, areas of activity and official websites.
+> An independent guide to established real estate developers active in Tulum, Mexico, covering their backgrounds, areas of activity and official websites.
 
-Tulum Properties is an independent editorial directory. It is not a real estate agency or broker, does not sell property and is not affiliated with the companies it profiles.
+Tulum Properties is an independent editorial directory about real estate developers in Tulum, Mexico. It is not a real estate agency or broker, does not sell property and is not affiliated with the companies it profiles. Each profile links to the developer's official website.
+
+## Key facts
+- Website: https://www.tulum-properties.com/
+- Topic: Residential real estate developers active in Tulum, Mexico
+- Developers profiled: Inmobilia, SIMCA, TAO México, Grupo R4 Yucatán
+- Contact: Or@tulum-properties.com
 
 ## Developer profiles
-- [Inmobilia](https://www.tulum-properties.com/developers/inmobilia/): A Mérida-based developer of large planned communities whose Tulum presence centres on Tulum 101, a master-planned district of residential, hospitality and mixed-use projects.
-- [SIMCA](https://www.tulum-properties.com/developers/simca/): A southeast-Mexico developer with residential, industrial and retail divisions, active in Tulum through condominium projects in Aldea Zamá, La Veleta and the Tulum 101 master plan.
-- [TAO México](https://www.tulum-properties.com/developers/tao-mexico/): TAO México is a Riviera Maya-born developer of residential communities, with completed and ongoing projects in Tulum, Akumal and Puerto Aventuras and newer work in Puerto Vallarta and Los Cabos.
-- [Grupo R4 Yucatán](https://www.tulum-properties.com/developers/grupo-r4/): A Yucatán Peninsula developer with residential projects in Yucatán and Quintana Roo, including three condominium buildings in Tulum's Aldea Zamá area.
+- [Inmobilia](https://www.tulum-properties.com/developers/inmobilia/): A Mérida-based developer of large planned communities whose Tulum presence centres on Tulum 101, a master-planned district of residential, hospitality and mixed-use projects. Official website: https://www.inmobilia.mx/
+- [SIMCA](https://www.tulum-properties.com/developers/simca/): A southeast-Mexico developer with residential, industrial and retail divisions, active in Tulum through condominium projects in Aldea Zamá, La Veleta and the Tulum 101 master plan. Official website: https://simca.mx/
+- [TAO México](https://www.tulum-properties.com/developers/tao-mexico/): TAO México is a Riviera Maya-born developer of residential communities, with completed and ongoing projects in Tulum, Akumal and Puerto Aventuras and newer work in Puerto Vallarta and Los Cabos. Official website: https://taoméxico.com/en/
+- [Grupo R4 Yucatán](https://www.tulum-properties.com/developers/grupo-r4/): A Yucatán Peninsula developer with residential projects in Yucatán and Quintana Roo, including three condominium buildings in Tulum's Aldea Zamá area. Official website: https://grupor4yucatan.mx/
+
+## Projects mentioned
+- Tulum 101 by Inmobilia (Tulum, Quintana Roo): Master-planned community (macro-lots)
+- Nido by Tulum 101 by Inmobilia (Tulum 101, Tulum): Gated community of single-family lots
+- Ramia by Tulum 101 by Inmobilia (Tulum 101, Tulum): Residential lots
+- 101 Park by Inmobilia (Tulum 101, Tulum): Condominium community
+- Humana Tulum by Inmobilia (Tulum 101, Tulum): Mixed-use (residences and hotel)
+- Mayaliah Tulum MGallery by Inmobilia (Tulum): Branded residences and boutique hotel
+- Faena Residences Tulum by Inmobilia (Tulum): Branded residences
+- Costa Caribe by SIMCA (Aldea Zamá, Tulum): Condominiums
+- Gran Tulum by SIMCA (Tulum 101, Tulum): Condominiums
+- Natal by SIMCA (La Veleta, Tulum): Condominiums
+- Querido Tulum by SIMCA (Tulum): Condominiums (completed)
+- Edena Tulum by TAO México (Tulum): Homes & condominiums
+- TAO Tulum by TAO México (Aldea Zamá, Tulum): Residential community
+- Santamar & Santamar Prime by TAO México (Akumal): Beachfront condominiums
+- Sek Akumal by TAO by TAO México (Akumal): Condominiums
+- TAO Náutico by TAO México (Puerto Aventuras): Waterfront condominiums
+- Joy Tree Akumal by TAO México (Akumal): Residential lots
+- TAO Blue Gardens by TAO México (Puerto Vallarta, Jalisco): Condominiums & bungalows
+- Monte Rocella by TAO México (Los Cabos, Baja California Sur): Condominiums
+- Carey Tulum Condos by Grupo R4 Yucatán (Aldea Zamá (Selvazama master plan), Tulum): Condominiums
+- Cautiva by Grupo R4 Yucatán (Aldea Zamá, Tulum): Condominiums with commercial area
+- Déjà Vu by Grupo R4 Yucatán (Aldea Zamá (Selvazama master plan), Tulum): Residences in two towers
+- Altra Beach Condos by Grupo R4 Yucatán (Playa del Carmen): Condominiums
+- Olaya by Grupo R4 Yucatán (Playa del Carmen): Condominiums
 
 ## About
 - [About the guide](https://www.tulum-properties.com/about/)
 - [Editorial policy](https://www.tulum-properties.com/editorial-policy/)
 - [Disclaimer](https://www.tulum-properties.com/disclaimer/)
+- [Contact](https://www.tulum-properties.com/contact/)

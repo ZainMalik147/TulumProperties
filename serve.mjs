@@ -39,4 +39,4 @@ http.createServer((req, res) => {
     'cache-control': 'no-store'
   });
   fs.createReadStream(f).pipe(res);
-}).listen(port, () => console.log(Site preview running at: http://localhost:\));
+}).listen(port, () => console.log(`Site preview running at: http://localhost:${port}`));

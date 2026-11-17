@@ -5,9 +5,9 @@
   "dir": "ltr",
   "city": "Tulum",
   "cityCountry": "Mexico",
-  "description": "An independent guide to established real estate developers active in Tulum, Mexico — their backgrounds, areas of activity and official websites.",
+  "description": "An independent guide to established real estate developers active in Tulum, Mexico, covering their backgrounds, areas of activity and official websites.",
   "themeColor": "#16342A",
-  "contactEmail": "editor@tulum-properties.com",
+  "contactEmail": "Or@tulum-properties.com",
   "operator": "Tulum Properties",
   "gtmId": "",
   "ga4Id": "",
@@ -50,10 +50,10 @@
     "button": "Explore the Developers"
   },
   "intro": "An independent guide to established real estate developers active in Tulum, Mexico. Discover their backgrounds, areas of activity, and official websites.",
-  "aboutShort": "Tulum Properties is an independent informational resource based on publicly available information. We are not a real estate agency, we don't sell property, and we are not officially affiliated with, sponsored by, or endorsed by any of the companies featured. Every profile links straight to the developer's own website so you can continue your research at the source.",
+  "aboutShort": "Tulum Properties is an independent informational resource based on publicly available information. We are not a real estate agency, we don't sell property, and we have no official affiliation with any of the companies featured. Every profile links straight to the developer's own website so you can continue your research at the source.",
   "footerNote": "An independent editorial guide to the developers shaping Tulum's residential landscape.",
   "seo": {
-    "homeTitle": "Real Estate Developers in Tulum, Mexico — Independent Guide | Tulum Properties",
-    "homeDescription": "Independent guide to established real estate developers in Tulum, Mexico: Inmobilia, SIMCA, TAO México and Grupo R4 — backgrounds, projects and official websites."
+    "homeTitle": "Real Estate Developers in Tulum, Mexico: Independent Guide | Tulum Properties",
+    "homeDescription": "Independent guide to established real estate developers in Tulum, Mexico: Inmobilia, SIMCA, TAO México and Grupo R4, with backgrounds, projects and official websites."
   }
 }
