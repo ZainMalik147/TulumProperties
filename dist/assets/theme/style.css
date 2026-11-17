@@ -331,3 +331,6 @@ a { color: inherit; }
 .gal-item img { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; border-radius: 18px; box-shadow: 0 30px 60px -36px rgba(22,52,42,.55); }
 .gal-item figcaption { font-size: 13px; opacity: .75; margin-top: 10px; }
 @media (min-width: 900px) { .gal-grid { grid-template-columns: 1fr 1fr; gap: 34px; } .gal-item:nth-child(even) { margin-top: 60px; } }
+
+/* Logos inside the clickable wrapper need an explicit height (SVGs without width/height otherwise collapse) */
+.logo-link > img { height: 48px; max-width: 196px; }
