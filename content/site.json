@@ -7,13 +7,14 @@
   "cityCountry": "Mexico",
   "description": "An independent guide to established real estate developers active in Tulum, Mexico, covering their backgrounds, areas of activity and official websites.",
   "themeColor": "#16342A",
-  "contactEmail": "Or@tulum-properties.com",
+  "contactEmail": "editor@tulum-properties.com",
   "operator": "Tulum Properties",
   "gtmId": "",
   "ga4Id": "",
   "verification": {
     "google": "",
-    "bing": ""
+    "bing": "",
+    "ahrefs": ""
   },
   "indexNowKey": "6b1f2c9e4d8a4f0b9c3e7a51d2f84e60",
   "maxAdvertisers": 8,

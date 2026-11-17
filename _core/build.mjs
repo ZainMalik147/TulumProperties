@@ -67,6 +67,7 @@ ${img ? `<meta property="og:image" content="${esc(img)}">` : ''}
 <meta name="theme-color" content="${esc(site.themeColor || '#000')}">
 ${site.verification?.google ? `<meta name="google-site-verification" content="${esc(site.verification.google)}">` : ''}
 ${site.verification?.bing ? `<meta name="msvalidate.01" content="${esc(site.verification.bing)}">` : ''}
+${site.verification?.ahrefs ? `<meta name="ahrefs-site-verification" content="${esc(site.verification.ahrefs)}">` : ''}
 <link rel="icon" href="/assets/brand/favicon.svg" type="image/svg+xml">
 ${ld}`;
 }
