@@ -87,4 +87,4 @@ User-agent: MistralAI-User
 Allow: /
 Disallow: /admin/
 
-Sitemap: https://www.tulum-properties.com/sitemap.xml
+Sitemap: https://tulum.properties/sitemap.xml

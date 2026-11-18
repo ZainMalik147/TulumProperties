@@ -1,13 +1,13 @@
 {
   "name": "Tulum Properties",
-  "url": "https://www.tulum-properties.com",
+  "url": "https://tulum.properties",
   "lang": "en",
   "dir": "ltr",
   "city": "Tulum",
   "cityCountry": "Mexico",
   "description": "An independent guide to established real estate developers active in Tulum, Mexico, covering their backgrounds, areas of activity and official websites.",
   "themeColor": "#16342A",
-  "contactEmail": "editor@tulum-properties.com",
+  "contactEmail": "editor@tulum.properties",
   "operator": "Tulum Properties",
   "gtmId": "",
   "ga4Id": "",
@@ -19,7 +19,7 @@
   "indexNowKey": "6b1f2c9e4d8a4f0b9c3e7a51d2f84e60",
   "maxAdvertisers": 8,
   "outboundUtm": {
-    "utm_source": "tulum-properties",
+    "utm_source": "tulum.properties",
     "utm_medium": "referral",
     "utm_campaign": "developer-guide"
   },
